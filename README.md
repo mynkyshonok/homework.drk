@@ -9,7 +9,8 @@
 
 #### Решение:
 
-
+[PKT Файл](hsrp_advanced_halharov.pkt)
+![Конфиг](conf.png)
 ------
 
 
