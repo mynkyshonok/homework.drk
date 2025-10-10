@@ -1,0 +1,20 @@
+vrrp_script chk_web {
+	script "/etc/keepalived/check_web.sh"
+	interval 3
+}
+
+vrrp_instance VI_1 {
+	state BACKUP
+	interface enp0s3
+	virtual_router_id 50
+	priority 200
+	advert_int 1
+	
+	track_script {
+		chk_web
+	}
+
+	virtual_ipaddress {
+		192.168.151.50/24
+	}
+}
